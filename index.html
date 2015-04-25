@@ -34,6 +34,15 @@
     <script type="text/javascript" src="https://rawgit.com/janpaepke/ScrollMagic/master/js/jquery.scrollmagic.debug.js"></script>
     <script type="text/javascript" src="js/jquery.superscrollorama.js"></script>
 
+<script>
+if( /iPhone|iPad|iPod/i.test(navigator.userAgent) ) {
+    document.write('<meta name="viewport" content="width=1366,user-scalable=no">')
+}
+else {
+    document.write('<meta name="viewport" content="width=1366">');
+}
+</script>
+
 </head>
 <body>
 <div class="mobilenav">
