@@ -105,18 +105,13 @@ header {
         }
     }
 }
-#main-menu {
-    top: 20px;
-    opacity: 0;
-}
 .top-search-form {
     position: absolute;
     z-index: 99;
     right: 120px;
-    top: 10px;
+    top: 20px;
     width: 393px;
     float: right;
-    opacity: 0;
     .input-group {
         position: relative;
         overflow: hidden;
@@ -152,19 +147,16 @@ header {
     position: relative;
     z-index: 9;
     width: 100%;
-    max-width: 1366px;
-    max-height: 100%;
     overflow: hidden;
-    margin: auto;
     img {
         height: 100%;
         width: 100%;
     }
-    &.s1 {margin-top: -135px;}
-    &.s2 {margin-top: -45px;}
+    &.s1 {margin-top: -85px;}
+    &.s2 {margin-bottom: -99px;margin-top: -120px;}
     &.s3 {margin-top: -130px;}
     &.s4 {margin-top: -170px;}
-    &.s5 {margin-top: -200px;}
+    &.s5 {margin-top: -120px;}
 }
 .bg {
     width: 100%;
@@ -174,23 +166,14 @@ header {
     top: 0;
     left: 0;
     z-index: 1;
-    &.bgsec2 {top: -162px;}
-    &.bgsec3 {top: -205px;}
-    &.bgsec4 {top: -154px;}
-    &.bgsec5 {top: -190px;}
-    &.bgsec6 {top: -18px;}
 }
 
 article{
     width: 100%; position: relative;
     #section1 {
-        height: 1080px;
-        // min-height: 148vh;
+        // min-height: 780px;
+        min-height: 148vh;
         width: 100%;
-        max-width: 1366px;
-        position: relative;
-        margin: auto;
-        overflow: hidden;
         // background: url(../img/bg.jpg) no-repeat center center;
         // .background-size(cover, 100%);
         #boxes {
@@ -207,18 +190,17 @@ article{
         #boxes-close , #boxes-far {
             .transition(all 0.2s ease);
             position: absolute;
-            top: -690px;
+            top: -765px;
             overflow: visible;
             background: url(../img/boxes-close.png) repeat center top;
-            // background-size: contain;
-            width: 1426px;
-            height: 686px * 2;
+            width: 100%;
+            height: 762px;
             z-index: 4;
             &#boxes-far {
                 background: url(../img/boxes-far.png) repeat center top !important;
-                top: -690px;
+                top: -605px;
                 width: 100%;
-                height: 686px * 2;
+                height: 605px * 2;
                 z-index: 2 !important;
             }
         }
@@ -231,8 +213,6 @@ article{
         z-index: 3;
         position: relative;
         width: 100%;
-        top: 0;
-        .transition(all 0.2s ease);
         #logo-1 {}
         .logo {margin-bottom: 30px;}
         .logo-fixed{
@@ -311,7 +291,6 @@ article{
         position: relative;
         z-index: 4;
         width: 100%;
-        max-width: 1366px;
         height: 958px;
         // overflow: hidden;
         top: 0;
@@ -338,7 +317,6 @@ article{
             @width : 615px;
             width: @width;
             height: 149px;
-            top: 450px !important;
             .tagline(@width);
         }
         #section4-tagline {
@@ -356,12 +334,11 @@ article{
             z-index: 2;
             opacity: 0;
             margin: 0 auto;
-            top: 30px;
         }
 
     }//section2 Document
     #section3 {
-        height: 1090px;
+        height: 956px;
         .package-section-3 {
             margin-bottom: 0 !important;
             .box-frontside {
@@ -402,7 +379,7 @@ article{
         }
     }//section 5
     #section6 {
-        height: 345px;
+        height: 344px;
         .hotline {text-align: center;width: 100%;padding-top: 80px;position: relative;z-index: 2;}
     }//section6
     footer {
