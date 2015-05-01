@@ -33,7 +33,7 @@ $(document).ready(function() {
         .set("#section2 .package-wrapper", {bottom:390})
         .set("#section3 .package-wrapper", {bottom:290})
         .set("#section4 .package-wrapper", {bottom:270})
-        .to("#main-menu", 1,{opacity:1,scale:1.5})
+        .to("#trigger-overlay", 1,{opacity:1,scale:1.5})
         .to(".top-search-form",1, {opacity:1})
         .set(["#boxes-close", "#boxes-far"] , {css:{height:680}})
         .set('#showcase .gallery figure', {scale:1.3,position:"relative"})
@@ -149,7 +149,7 @@ $(document).ready(function() {
     } else {
 
         TweenMax.to("#search-form", 1, {css:{top:20, opacity:1},delay:2 });
-        TweenMax.to("#main-menu", 1, {css:{top:30, opacity:1},delay:2 });
+        TweenMax.to("#trigger-overlay", 1, {css:{top:30, opacity:1},delay:2 });
 
         $(".mobilenav").toggleClass("extended");
 
@@ -181,14 +181,27 @@ $(document).ready(function() {
             TweenMax.to(window, 5, {scrollTo: {y: newpos}});
         });
 
+        $("#trigger-overlay").click(function () {
+            // $(".mobilenav").fadeToggle(500);
+            $(".top-menu").toggleClass("top-animate");
+            $("body").toggleClass("noscroll");
+            $(".mid-menu").toggleClass("mid-animate");
+            $(".bottom-menu").toggleClass("bottom-animate");
+        });
+
         //  bind scroll to anchor links
-        $(document).on("click", "a[href^=#]", function (e) {
+        $(document).on("click", "a[href^=#]" , function (e) {
             var id = $(this).attr("href");
-            $(".mobilenav").fadeOut(500);
+
+            // triggerBttn.addEventListener( 'click',  );
+            $("#mobilenav").removeClass('open');
+            $("#mobilenav").addClass('close');
+            $("#mobilenav").removeClass('close');
             $(".top-menu").removeClass("top-animate");
             $("body").removeClass("noscroll");
             $(".mid-menu").removeClass("mid-animate");
             $(".bottom-menu").removeClass("bottom-animate");
+
             if ($(id).length > 0) {
                 e.preventDefault();
 
@@ -200,7 +213,7 @@ $(document).ready(function() {
                     history.pushState("", document.title, id);
                 }
             }
-        });
+        } );
 
         // $("#button").click(function() {
         //     $('html, body').animate({
