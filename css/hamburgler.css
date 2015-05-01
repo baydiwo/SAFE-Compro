@@ -19,21 +19,21 @@
 }
 .top-menu {
     top: 5px;
-    width: 25px;
+    width: 40px;
     height: 2px;
     border-radius: 10px;
     background-color: #F9A530;
 }
 .mid-menu {
     top: 13px;
-    width: 25px;
+    width: 40px;
     height: 2px;
     border-radius: 10px;
     background-color: #F9A530;
 }
 .bottom-menu {
     top: 21px;
-    width: 25px;
+    width: 40px;
     height: 2px;
     border-radius: 10px;
     background-color: #F9A530;
