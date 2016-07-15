@@ -25,6 +25,8 @@
     <script type="text/javascript" src="js/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
     <script type="text/javascript" src="js/greensock/plugins/ScrollToPlugin.min.js"></script>
     <script type="text/javascript" src="js/jquery.superscrollorama.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.min.js"></script>
+
 
     <script>
     if( /iPhone|iPad|iPod/i.test(navigator.userAgent) ) {
@@ -241,5 +243,20 @@
     <!-- responsivemenu -->
     <script src="js/classie.js"></script>
     <script src="js/demo1.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#trigger-overlay').click(function() {
+                // console.log('click');
+                $('.overlay').toggle('slow', function() {
+                    $(this).css({ "opacity": "1", "visibility": "visible" });
+                })
+            });
+        });
+        SmoothScroll({
+            animationTime    : 1000, // [ms]
+            stepSize         : 100, // [px]
+        })
+    </script>
 </body>
 </html>
